@@ -1,0 +1,694 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+nav {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightblue;
+  align-items: center;
+}
+nav .portfolio {
+  margin-left: 40px;
+}
+nav .portfolio h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+nav .menu {
+  margin-right: 40px;
+}
+nav .menu a {
+  padding: 0px 10px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s;
+}
+nav .menu a:hover {
+  color: white;
+  transition: 0.5s;
+}
+nav .hamburger {
+  margin-right: 20px;
+  cursor: pointer;
+  display: none;
+}
+nav .hamburger div {
+  width: 30px;
+  height: 2px;
+  margin: 6px 0;
+  background: #fff;
+}
+
+header {
+  width: 100vw;
+  height: 630px;
+  display: flex;
+  justify-content: space-evenly;
+}
+header .about-info-outer {
+  width: 900px;
+  height: 100%;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .about-info-outer .info {
+  width: 550px;
+  height: 250px;
+  padding: 10px 20px;
+  background-color: lightblue;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+header .about-info-outer .info h2 {
+  text-transform: capitalize;
+  font-size: 40px;
+  margin-top: 20px;
+}
+header .about-info-outer .info h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+header .about-info-outer .info p {
+  font-size: 12px;
+  margin: 15px 0px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+header .about-info-outer .info a {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+  padding: 6px 14px;
+  border-radius: 10px;
+}
+header .about-info-outer .social-media {
+  margin-top: 30px;
+}
+header .about-info-outer .social-media .icon {
+  display: flex;
+}
+header .about-info-outer .social-media h3 {
+  font-size: 16px;
+  margin-top: 50px;
+}
+header .about-info-outer .social-media .social-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+header .about-info-outer .social-media .social-img img {
+  width: 100%;
+}
+header .about-info-outer .social-media #telegram {
+  width: 25px;
+  height: 25px;
+  margin-top: 3px;
+}
+header .about-img-outer {
+  width: 600px;
+  position: relative;
+}
+header .about-img-outer .about-img {
+  margin: 70px;
+  width: 400px;
+  height: 400px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+header .about-img-outer .about-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: 0px -80px;
+}
+header .about-img-outer .book {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  font-size: 40px;
+  rotate: -22deg;
+}
+header .about-img-outer .trophy {
+  position: absolute;
+  top: 200px;
+  right: 25px;
+  font-size: 35px;
+  rotate: 22deg;
+}
+header .about-img-outer .laptop {
+  position: absolute;
+  top: 400px;
+  left: 25px;
+  font-size: 70px;
+  rotate: -22deg;
+}
+
+.service-outer {
+  width: 100vw;
+  height: 450px;
+  background-color: lightgreen;
+}
+.service-outer h2 {
+  text-transform: capitalize;
+  text-align: center;
+  padding: 30px 0px;
+  padding-bottom: 0px;
+}
+.service-outer .underline {
+  width: 80px;
+  height: 3px;
+  background-color: blue;
+  margin-top: 5px;
+  margin: auto;
+}
+.service-outer .service-in-out {
+  width: 100%;
+  height: 350px;
+  background-color: lightsalmon;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+.service-outer .service-in-out .section {
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px;
+}
+.service-outer .service-in-out .section .graphic {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  margin-top: 10px;
+}
+.service-outer .service-in-out .section .graphic img {
+  width: 100%;
+  height: 100%;
+}
+.service-outer .service-in-out .section h3 {
+  text-transform: capitalize;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 16px;
+}
+.service-outer .service-in-out .section p {
+  text-transform: capitalize;
+  font-size: 12px;
+  text-align: center;
+}
+
+.skill-outer {
+  width: 100vw;
+  height: 400px;
+  background-color: lightseagreen;
+}
+.skill-outer .skill-in {
+  width: 100vw;
+  height: 300px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.skill-outer .skill-in .skill-part1 {
+  width: 95%;
+  height: 300px;
+  background-color: limegreen;
+  margin: 20px;
+}
+.skill-outer .skill-in .skill-part1 .skill-contain {
+  padding: 20px;
+}
+.skill-outer .skill-in .skill-part1 .skill-upper {
+  width: 100%;
+  height: 120px;
+  background-color: lightcyan;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+.skill-outer .skill-in .skill-part1 .skill-upper .skill-img {
+  width: 80px;
+  height: 80px;
+}
+.skill-outer .skill-in .skill-part1 .skill-upper .skill-img img {
+  width: 100%;
+  height: 100%;
+}
+.skill-outer .skill-in .skill-part1 .skill-upper h4 {
+  text-align: center;
+  font-size: 16px;
+}
+.skill-outer .skill-in .skill-part1 .skill-lower {
+  width: 100%;
+  height: 120px;
+  background-color: lightcyan;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+.skill-outer .skill-in .skill-part1 .skill-lower .skill-img {
+  width: 80px;
+  height: 80px;
+}
+.skill-outer .skill-in .skill-part1 .skill-lower .skill-img img {
+  width: 100%;
+  height: 100%;
+}
+.skill-outer .skill-in .skill-part1 .skill-lower h4 {
+  text-align: center;
+  font-size: 16px;
+}
+
+.project-outer {
+  width: 100vw;
+  height: 800px;
+  background-color: yellow;
+}
+.project-outer .project-in {
+  width: 100%;
+  height: 300px;
+  padding: 20px 0px;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.project-outer .project-in .project-img {
+  width: 500px;
+  height: 100%;
+  background-color: lightgreen;
+  border-radius: 10px;
+}
+.project-outer .project-in .project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0px -80px;
+  border-radius: 10px;
+}
+.project-outer .project-in .project-info {
+  width: 500px;
+  height: 100%;
+  background-color: lightskyblue;
+  padding: 0px 20px;
+}
+.project-outer .project-in .project-info h3 {
+  font-size: 20px;
+  margin-top: 80px;
+  text-transform: capitalize;
+}
+.project-outer .project-in .project-info p {
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.project-outer .project-in .project-info .view-outer {
+  width: 100%;
+  height: 30px;
+  background-color: lightcoral;
+  display: flex;
+}
+.project-outer .project-in .project-info .view-outer .view-link {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.project-outer .project-in .project-info .view-outer .view-link .link-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+.project-outer .project-in .project-info .view-outer .view-link .link-img img {
+  width: 100%;
+  height: 100%;
+}
+.project-outer .project-in .project-info .view-outer .view-link a {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.achieve-outer {
+  width: 100vw;
+  height: 500px;
+  background-color: darkcyan;
+}
+.achieve-outer .achieve-in {
+  width: 90%;
+  height: 400px;
+  background-color: darkgoldenrod;
+  margin: 10px auto;
+  display: flex;
+}
+.achieve-outer .achieve-in .achieve-part1 {
+  width: 30%;
+  height: 380px;
+  margin: 10px auto;
+  background-image: url("../image/Achievements/Ux_ui.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.achieve-outer .achieve-in .achieve-part1 .achieve-info {
+  background-color: lightcyan;
+  margin-top: 90%;
+}
+.achieve-outer .achieve-in .achieve-part1 .achieve-info h4 {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+.achieve-outer .achieve-in .achieve-part1 .achieve-info p {
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.achieve-outer .achieve-in .achieve-part2 {
+  width: 60%;
+  height: 380px;
+  background-color: darkkhaki;
+  margin: 10px auto;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-upper {
+  width: 100%;
+  height: 45%;
+  background-color: lightsalmon;
+  display: flex;
+  margin-top: 10px;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-upper .achieve-img {
+  width: 40%;
+  height: 100%;
+  background-color: lightgoldenrodyellow;
+  margin: auto;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-upper .achieve-img .achieve-info {
+  background-color: lightcyan;
+  margin-top: auto;
+  margin-top: 120px;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-upper .achieve-img .achieve-info h4 {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-upper .achieve-img .achieve-info p {
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-upper .img-1 {
+  background-image: url("../image/Achievements/Sem_1_stage.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-upper .img-2 {
+  background-image: url("../image/Achievements/Sem_1_perform.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-lower {
+  width: 100%;
+  height: 45%;
+  background-color: lightsalmon;
+  display: flex;
+  margin-top: 20px;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-lower .achieve-img {
+  width: 40%;
+  height: 100%;
+  background-color: lightgoldenrodyellow;
+  margin: auto;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-lower .achieve-img .achieve-info {
+  background-color: lightcyan;
+  margin-top: 100px;
+  margin-top: 120px;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-lower .achieve-img .achieve-info h4 {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-lower .achieve-img .achieve-info p {
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-lower .img-3 {
+  background-image: url("../image/Achievements/Best_per_cet.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.achieve-outer .achieve-in .achieve-part2 .achieve-lower .img-4 {
+  background-image: url("../image/Achievements/Sem_2_top_stage.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.footer-out {
+  width: 100vw;
+  height: 160px;
+  padding-top: 10px;
+  background-color: lightblue;
+}
+.footer-out .footer-in {
+  padding: 15px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: lightcoral;
+}
+.footer-out .footer-in .menu {
+  display: flex;
+  flex-direction: column;
+}
+.footer-out .footer-in .menu a {
+  padding: 3px 10px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+.footer-out .footer-in .address h3 {
+  font-size: 17px;
+  text-transform: capitalize;
+  font-size: 16px;
+  padding: 3px 0px;
+  color: lightsalmon;
+}
+.footer-out .footer-in .address p {
+  font-size: 15px;
+  color: limegreen;
+  font-size: 12px;
+  font-weight: 500;
+}
+.footer-out .footer-in .social-media .icon {
+  display: flex;
+}
+.footer-out .footer-in .social-media h3 {
+  font-size: 16px;
+  margin: 5px 0px;
+}
+.footer-out .footer-in .social-media .social-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.footer-out .footer-in .social-media .social-img img {
+  width: 100%;
+}
+.footer-out .footer-in .social-media #telegram {
+  width: 25px;
+  height: 25px;
+  margin-top: 3px;
+}
+
+@media screen and (max-width: 425px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 700px;
+    margin-top: 70px;
+  }
+  header .about-info-outer {
+    width: 280px;
+    padding: 30px;
+    display: inline;
+  }
+  header .about-info-outer .info {
+    margin-left: 0px;
+    width: 240px;
+    height: 440px;
+  }
+  header .about-img-outer {
+    width: 100vw;
+    height: 200px;
+  }
+  header .about-img-outer .book {
+    top: 18px;
+    left: 18px;
+  }
+  header .about-img-outer .trophy {
+    top: 120px;
+    right: 70px;
+  }
+  header .about-img-outer .laptop {
+    top: 250px;
+    left: 15px;
+  }
+  header .about-img-outer .about-img {
+    width: 250px;
+    height: 250px;
+    margin: 50px auto;
+    margin-left: 45px;
+  }
+  .service-outer {
+    margin-top: 230px;
+    width: 340px;
+    height: 1000px;
+  }
+  .service-outer h2 {
+    text-align: center;
+  }
+  .service-outer .service-in-out {
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    margin-left: 20px;
+  }
+  .skill-outer {
+    margin-top: 40px;
+    width: 340px;
+    height: 1100px;
+  }
+  .skill-outer .skill-in {
+    margin-left: 0px;
+    width: 250px;
+  }
+  .skill-outer .skill-in .skill-part1 {
+    flex-direction: column;
+    width: 340px;
+    margin-top: 900px;
+    margin-left: 100px;
+    height: 500px;
+  }
+  .skill-outer .skill-in .skill-part1 .skill-upper {
+    flex-direction: column;
+    width: 100px;
+    margin-left: 50px;
+  }
+  .skill-outer .skill-in .skill-part1 .skill-lower {
+    flex-direction: column;
+    width: 250px;
+    background-color: lightblue;
+    margin-bottom: 100px;
+    margin-left: 95px;
+  }
+  .project-outer {
+    width: 340px;
+    height: 400px;
+  }
+  .project-outer .project-in {
+    flex-direction: column;
+    width: 340px;
+    height: 500px;
+  }
+  .project-outer .project-in .project-img {
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+  }
+  .project-outer .project-in .project-info {
+    width: 300px;
+  }
+  .project-outer .project-in .project-info h3 {
+    margin-top: 40px;
+  }
+  .achieve-outer {
+    margin-top: 800px;
+    width: 340px;
+    height: 1200px;
+  }
+  .achieve-outer .achieve-in {
+    width: 340px;
+    height: 800px;
+    flex-direction: column;
+  }
+  .achieve-outer .achieve-in .achieve-part1 {
+    width: 300px;
+  }
+  .achieve-outer .achieve-in .achieve-part2 {
+    width: 300px;
+    height: 800px;
+  }
+  .achieve-outer .achieve-in .achieve-part2 .achieve-upper {
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+  }
+  .achieve-outer .achieve-in .achieve-part2 .achieve-upper .achieve-img {
+    width: 300px;
+    margin: 10px auto;
+  }
+  .achieve-outer .achieve-in .achieve-part2 .achieve-lower {
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    margin-top: 70px;
+  }
+  .achieve-outer .achieve-in .achieve-part2 .achieve-lower .achieve-img {
+    width: 300px;
+    margin: 10px auto;
+  }
+  .footer-out {
+    width: 340px;
+    height: 360px;
+    margin-top: 20px;
+  }
+  .footer-out .footer-in {
+    flex-direction: column;
+  }
+  .footer-out .footer-in .menu {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-out .footer-in .address {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-out .footer-in .social-media {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

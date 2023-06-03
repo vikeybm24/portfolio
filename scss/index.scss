@@ -567,8 +567,40 @@ header{
 }
 // media-querry-------------
 
-@media screen and (max-width: 425px){
-
+@media screen and (max-width: 380px){
+    nav{
+        width: 340px;
+        .hamburger {
+            display: block;
+        }
+        .menu{
+            margin: 0;
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 290px;
+            height: 200px;
+            background-color: #0b2239;
+            padding: 30px;
+            transition: 0.3s;
+            text-align: center;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            a{
+                background-color: lightblue;
+                margin: 10px 0px;
+                padding: 10px auto;
+                height: 150px;
+            }
+           
+        }
+        .menu.active {
+            top: 60px;
+        }
+       
+        
+    }
     header{
         display: flex;
         flex-direction: column;
@@ -741,4 +773,7 @@ header{
         }
     }
 }
+
+//-------------------
+
 

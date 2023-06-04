@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,20 +13,91 @@ a {
   text-transform: capitalize;
 }
 
+p {
+  line-height: 16px;
+}
+
+@keyframes roll {
+  from {
+    transform: translateX(-800px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.animated-text {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.animated-text span {
+  position: relative;
+}
+
+.animated-text span::before {
+  content: "Web Developer";
+  color: #00C896;
+  animation: words 20s infinite;
+}
+
+.animated-text span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: #F2ECFF;
+  border-left: 2px solid #3A3A3A;
+  right: -8px;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid rgba(255, 127, 80, 0);
+  }
+}
+@keyframes words {
+  0%, 20% {
+    content: "Web developer";
+  }
+  21%, 40% {
+    content: "Graphic Designer";
+  }
+  41%, 60% {
+    content: "Programmer";
+  }
+  61%, 80% {
+    content: "Web developer";
+  }
+  81%, 100% {
+    content: "Graphic Designer";
+  }
+}
+@keyframes typing {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 8px);
+  }
+}
 nav {
   width: 100vw;
   height: 60px;
   display: flex;
   justify-content: space-between;
-  background-color: lightblue;
+  background-color: #3A3A3A;
   align-items: center;
 }
 nav .portfolio {
-  margin-left: 40px;
+  margin-left: 50px;
 }
 nav .portfolio h3 {
   text-transform: uppercase;
   font-size: 20px;
+  font-size: 18px;
+  color: #F2ECFF;
 }
 nav .menu {
   margin-right: 40px;
@@ -31,13 +106,14 @@ nav .menu a {
   padding: 0px 10px;
   text-transform: capitalize;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  transition: 0.5s;
+  transition: 0.2s;
+  color: #F2ECFF;
 }
 nav .menu a:hover {
-  color: white;
-  transition: 0.5s;
+  color: #00C896;
+  transition: 0.2s;
 }
 nav .hamburger {
   margin-right: 20px;
@@ -48,7 +124,7 @@ nav .hamburger div {
   width: 30px;
   height: 2px;
   margin: 6px 0;
-  background: #fff;
+  background: #F2ECFF;
 }
 
 header {
@@ -60,7 +136,7 @@ header {
 header .about-info-outer {
   width: 900px;
   height: 100%;
-  background-color: lightcoral;
+  background-color: #696969;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,9 +145,14 @@ header .about-info-outer .info {
   width: 550px;
   height: 250px;
   padding: 10px 20px;
-  background-color: lightblue;
-  border: 5px solid white;
+  background-color: #F2ECFF;
+  border: 5px solid #00C896;
   border-radius: 10px;
+  animation-name: roll;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  transform: translateX(0);
 }
 header .about-info-outer .info h2 {
   text-transform: capitalize;
@@ -87,13 +168,21 @@ header .about-info-outer .info p {
   margin: 15px 0px;
   margin-bottom: 20px;
   text-transform: capitalize;
+  color: gray;
 }
 header .about-info-outer .info a {
   font-size: 16px;
   font-weight: 500;
-  background-color: white;
-  padding: 6px 14px;
+  background-color: #00C896;
+  padding: 8px 14px;
   border-radius: 10px;
+  color: #F2ECFF;
+  transition: 0.2s;
+}
+header .about-info-outer .info a:hover {
+  background-color: #3A3A3A;
+  color: #00C896;
+  transition: 0.2s;
 }
 header .about-info-outer .social-media {
   margin-top: 30px;
@@ -104,19 +193,16 @@ header .about-info-outer .social-media .icon {
 header .about-info-outer .social-media h3 {
   font-size: 16px;
   margin-top: 50px;
+  color: #F2ECFF;
 }
 header .about-info-outer .social-media .social-img {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+  margin-top: 10px;
 }
-header .about-info-outer .social-media .social-img img {
-  width: 100%;
-}
-header .about-info-outer .social-media #telegram {
-  width: 25px;
-  height: 25px;
-  margin-top: 3px;
+header .about-info-outer .social-media .social-img svg {
+  color: #00C896;
 }
 header .about-img-outer {
   width: 600px;
@@ -126,13 +212,13 @@ header .about-img-outer .about-img {
   margin: 70px;
   width: 400px;
   height: 400px;
-  border: 3px solid black;
-  border-radius: 10px;
+  border: 3px solid #00C896;
+  border-radius: 50%;
 }
 header .about-img-outer .about-img img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 50%;
   object-fit: cover;
   object-position: 0px -80px;
 }
@@ -140,8 +226,15 @@ header .about-img-outer .book {
   position: absolute;
   top: 100px;
   left: 30px;
-  font-size: 40px;
+  font-size: 50px;
   rotate: -22deg;
+  width: 50px;
+  height: 50px;
+}
+header .about-img-outer .book svg {
+  width: 100%;
+  height: auto;
+  color: #00C896;
 }
 header .about-img-outer .trophy {
   position: absolute;
@@ -149,6 +242,13 @@ header .about-img-outer .trophy {
   right: 25px;
   font-size: 35px;
   rotate: 22deg;
+  width: 50px;
+  height: 50px;
+}
+header .about-img-outer .trophy svg {
+  width: 100%;
+  height: auto;
+  color: #00C896;
 }
 header .about-img-outer .laptop {
   position: absolute;
@@ -156,31 +256,39 @@ header .about-img-outer .laptop {
   left: 25px;
   font-size: 70px;
   rotate: -22deg;
+  width: 100px;
+  height: 100px;
+}
+header .about-img-outer .laptop svg {
+  width: 100%;
+  height: auto;
+  color: #00C896;
 }
 
 .service-outer {
   width: 100vw;
   height: 450px;
-  background-color: lightgreen;
+  background-color: #3A3A3A;
 }
 .service-outer h2 {
   text-transform: capitalize;
   text-align: center;
   padding: 30px 0px;
   padding-bottom: 0px;
+  color: #F2ECFF;
 }
 .service-outer .underline {
   width: 80px;
   height: 3px;
-  background-color: blue;
+  background-color: #00C896;
   margin-top: 5px;
   margin: auto;
 }
 .service-outer .service-in-out {
   width: 100%;
   height: 350px;
-  background-color: lightsalmon;
-  margin: 10px auto;
+  background-color: #F2ECFF;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
 }
@@ -207,22 +315,23 @@ header .about-img-outer .laptop {
   text-align: center;
   margin: 10px auto;
   font-size: 16px;
+  color: #00C896;
 }
 .service-outer .service-in-out .section p {
   text-transform: capitalize;
   font-size: 12px;
   text-align: center;
+  color: gray;
 }
 
 .skill-outer {
   width: 100vw;
   height: 400px;
-  background-color: lightseagreen;
+  background-color: #3A3A3A;
 }
 .skill-outer .skill-in {
   width: 100vw;
   height: 300px;
-  background-color: lightgray;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -230,7 +339,6 @@ header .about-img-outer .laptop {
 .skill-outer .skill-in .skill-part1 {
   width: 95%;
   height: 300px;
-  background-color: limegreen;
   margin: 20px;
 }
 .skill-outer .skill-in .skill-part1 .skill-contain {
@@ -239,7 +347,6 @@ header .about-img-outer .laptop {
 .skill-outer .skill-in .skill-part1 .skill-upper {
   width: 100%;
   height: 120px;
-  background-color: lightcyan;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -256,11 +363,11 @@ header .about-img-outer .laptop {
 .skill-outer .skill-in .skill-part1 .skill-upper h4 {
   text-align: center;
   font-size: 16px;
+  color: #F2ECFF;
 }
 .skill-outer .skill-in .skill-part1 .skill-lower {
   width: 100%;
   height: 120px;
-  background-color: lightcyan;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -277,85 +384,93 @@ header .about-img-outer .laptop {
 .skill-outer .skill-in .skill-part1 .skill-lower h4 {
   text-align: center;
   font-size: 16px;
+  color: #F2ECFF;
 }
 
 .project-outer {
   width: 100vw;
   height: 800px;
-  background-color: yellow;
+  background-color: #00C896;
+}
+.project-outer .underline {
+  background-color: #3A3A3A;
 }
 .project-outer .project-in {
   width: 100%;
   height: 300px;
   padding: 20px 0px;
-  background-color: lightcoral;
+  background-color: #F2ECFF;
   display: flex;
   justify-content: space-evenly;
   margin-top: 20px;
 }
 .project-outer .project-in .project-img {
-  width: 500px;
+  width: 650px;
   height: 100%;
-  background-color: lightgreen;
   border-radius: 10px;
 }
 .project-outer .project-in .project-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 0px -80px;
   border-radius: 10px;
 }
 .project-outer .project-in .project-info {
   width: 500px;
   height: 100%;
-  background-color: lightskyblue;
   padding: 0px 20px;
 }
 .project-outer .project-in .project-info h3 {
   font-size: 20px;
   margin-top: 80px;
   text-transform: capitalize;
+  margin-bottom: 5px;
 }
 .project-outer .project-in .project-info p {
   font-size: 12px;
   margin-bottom: 10px;
   text-transform: capitalize;
+  color: rgb(78, 78, 78);
 }
 .project-outer .project-in .project-info .view-outer {
   width: 100%;
   height: 30px;
-  background-color: lightcoral;
   display: flex;
 }
 .project-outer .project-in .project-info .view-outer .view-link {
-  margin-left: 20px;
+  margin-right: 12px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .project-outer .project-in .project-info .view-outer .view-link .link-img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin-right: 8px;
 }
-.project-outer .project-in .project-info .view-outer .view-link .link-img img {
+.project-outer .project-in .project-info .view-outer .view-link .link-img svg {
   width: 100%;
   height: 100%;
 }
 .project-outer .project-in .project-info .view-outer .view-link a {
   font-size: 12px;
   font-weight: 600;
+  color: #00C896;
+  transition: 0.2s;
+}
+.project-outer .project-in .project-info .view-outer .view-link a:hover {
+  color: #3A3A3A;
+  transition: 0.2s;
 }
 
 .achieve-outer {
   width: 100vw;
   height: 500px;
-  background-color: darkcyan;
+  background-color: #696969;
 }
 .achieve-outer .achieve-in {
   width: 90%;
   height: 400px;
-  background-color: darkgoldenrod;
   margin: 10px auto;
   display: flex;
 }
@@ -368,8 +483,9 @@ header .about-img-outer .laptop {
   background-repeat: no-repeat;
 }
 .achieve-outer .achieve-in .achieve-part1 .achieve-info {
-  background-color: lightcyan;
   margin-top: 90%;
+  background-color: #3A3A3A;
+  color: #F2ECFF;
 }
 .achieve-outer .achieve-in .achieve-part1 .achieve-info h4 {
   text-transform: capitalize;
@@ -386,26 +502,24 @@ header .about-img-outer .laptop {
 .achieve-outer .achieve-in .achieve-part2 {
   width: 60%;
   height: 380px;
-  background-color: darkkhaki;
   margin: 10px auto;
 }
 .achieve-outer .achieve-in .achieve-part2 .achieve-upper {
   width: 100%;
   height: 45%;
-  background-color: lightsalmon;
   display: flex;
   margin-top: 10px;
 }
 .achieve-outer .achieve-in .achieve-part2 .achieve-upper .achieve-img {
   width: 40%;
   height: 100%;
-  background-color: lightgoldenrodyellow;
   margin: auto;
 }
 .achieve-outer .achieve-in .achieve-part2 .achieve-upper .achieve-img .achieve-info {
-  background-color: lightcyan;
   margin-top: auto;
   margin-top: 120px;
+  background-color: #3A3A3A;
+  color: #F2ECFF;
 }
 .achieve-outer .achieve-in .achieve-part2 .achieve-upper .achieve-img .achieve-info h4 {
   text-transform: capitalize;
@@ -432,20 +546,19 @@ header .about-img-outer .laptop {
 .achieve-outer .achieve-in .achieve-part2 .achieve-lower {
   width: 100%;
   height: 45%;
-  background-color: lightsalmon;
   display: flex;
   margin-top: 20px;
 }
 .achieve-outer .achieve-in .achieve-part2 .achieve-lower .achieve-img {
   width: 40%;
   height: 100%;
-  background-color: lightgoldenrodyellow;
   margin: auto;
 }
 .achieve-outer .achieve-in .achieve-part2 .achieve-lower .achieve-img .achieve-info {
-  background-color: lightcyan;
   margin-top: 100px;
   margin-top: 120px;
+  background-color: #3A3A3A;
+  color: #F2ECFF;
 }
 .achieve-outer .achieve-in .achieve-part2 .achieve-lower .achieve-img .achieve-info h4 {
   text-transform: capitalize;
@@ -474,14 +587,14 @@ header .about-img-outer .laptop {
   width: 100vw;
   height: 160px;
   padding-top: 10px;
-  background-color: lightblue;
+  background-color: #00C896;
 }
 .footer-out .footer-in {
   padding: 15px 0px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: lightcoral;
+  background-color: #F2ECFF;
 }
 .footer-out .footer-in .menu {
   display: flex;
@@ -491,21 +604,28 @@ header .about-img-outer .laptop {
   padding: 3px 10px;
   text-transform: capitalize;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
+  color: #3A3A3A;
+  transition: 0.2s;
+}
+.footer-out .footer-in .menu a:hover {
+  color: #00C896;
+  transition: 0.2s;
 }
 .footer-out .footer-in .address h3 {
   font-size: 17px;
   text-transform: capitalize;
   font-size: 16px;
   padding: 3px 0px;
-  color: lightsalmon;
+  color: #3A3A3A;
+  font-weight: 700;
 }
 .footer-out .footer-in .address p {
   font-size: 15px;
-  color: limegreen;
+  color: #00C896;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .footer-out .footer-in .social-media .icon {
   display: flex;
@@ -513,24 +633,21 @@ header .about-img-outer .laptop {
 .footer-out .footer-in .social-media h3 {
   font-size: 16px;
   margin: 5px 0px;
+  color: #3A3A3A;
 }
 .footer-out .footer-in .social-media .social-img {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+  margin-top: 10px;
 }
-.footer-out .footer-in .social-media .social-img img {
-  width: 100%;
-}
-.footer-out .footer-in .social-media #telegram {
-  width: 25px;
-  height: 25px;
-  margin-top: 3px;
+.footer-out .footer-in .social-media .social-img svg {
+  color: #00C896;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
   nav {
-    width: 340px;
+    width: 390px;
   }
   nav .hamburger {
     display: block;
@@ -540,21 +657,22 @@ header .about-img-outer .laptop {
     position: absolute;
     top: -100%;
     left: 0;
-    width: 290px;
-    height: 200px;
-    background-color: #0b2239;
+    width: 330px;
+    height: 300px;
+    background-color: #3A3A3A;
     padding: 30px;
     transition: 0.3s;
     text-align: center;
-    height: 200px;
     display: flex;
     flex-direction: column;
+    z-index: 1;
   }
   nav .menu a {
-    background-color: lightblue;
+    color: #F2ECFF;
     margin: 10px 0px;
     padding: 10px auto;
     height: 150px;
+    font-weight: 400;
   }
   nav .menu.active {
     top: 60px;
@@ -567,7 +685,7 @@ header .about-img-outer .laptop {
     margin-top: 70px;
   }
   header .about-info-outer {
-    width: 280px;
+    width: 320px;
     padding: 30px;
     display: inline;
   }
@@ -586,7 +704,7 @@ header .about-img-outer .laptop {
   }
   header .about-img-outer .trophy {
     top: 120px;
-    right: 70px;
+    right: 30px;
   }
   header .about-img-outer .laptop {
     top: 250px;
@@ -596,12 +714,13 @@ header .about-img-outer .laptop {
     width: 250px;
     height: 250px;
     margin: 50px auto;
-    margin-left: 45px;
+    margin-left: 50px;
   }
   .service-outer {
     margin-top: 230px;
-    width: 340px;
-    height: 1000px;
+    width: 390px;
+    height: 1200px;
+    margin-bottom: 200px;
   }
   .service-outer h2 {
     text-align: center;
@@ -609,19 +728,20 @@ header .about-img-outer .laptop {
   .service-outer .service-in-out {
     flex-direction: column;
     width: 300px;
-    height: 100%;
+    height: 1000px;
     align-items: center;
     justify-content: center;
     margin: 10px auto;
-    margin-left: 20px;
+    margin-left: 30px;
+    padding: 0px 10px;
   }
   .skill-outer {
     margin-top: 40px;
-    width: 340px;
+    width: 390px;
     height: 1100px;
   }
   .skill-outer .skill-in {
-    margin-left: 0px;
+    margin-left: 35px;
     width: 250px;
   }
   .skill-outer .skill-in .skill-part1 {
@@ -639,17 +759,16 @@ header .about-img-outer .laptop {
   .skill-outer .skill-in .skill-part1 .skill-lower {
     flex-direction: column;
     width: 250px;
-    background-color: lightblue;
     margin-bottom: 100px;
     margin-left: 95px;
   }
   .project-outer {
-    width: 340px;
+    width: 390px;
     height: 400px;
   }
   .project-outer .project-in {
     flex-direction: column;
-    width: 340px;
+    width: 390px;
     height: 500px;
   }
   .project-outer .project-in .project-img {
@@ -659,13 +778,14 @@ header .about-img-outer .laptop {
   }
   .project-outer .project-in .project-info {
     width: 300px;
+    margin-left: 20px;
   }
   .project-outer .project-in .project-info h3 {
     margin-top: 40px;
   }
   .achieve-outer {
     margin-top: 800px;
-    width: 340px;
+    width: 390px;
     height: 1200px;
   }
   .achieve-outer .achieve-in {
@@ -700,7 +820,7 @@ header .about-img-outer .laptop {
     margin: 10px auto;
   }
   .footer-out {
-    width: 340px;
+    width: 390px;
     height: 360px;
     margin-top: 20px;
   }

@@ -690,9 +690,9 @@ header{
 
 @media screen and (max-width: 400px){
     nav{
+        width: 400px;
         .hamburger {
             display: block;
-            margin-right: 50px;
         }
         .menu{
             margin: 0;
@@ -730,7 +730,7 @@ header{
         height: 700px;
         margin-top: 70px;
         .about-info-outer{
-            width: 320px;
+            width: 340px;
             padding: 30px;
             display: inline;
             .info{
@@ -740,15 +740,16 @@ header{
             }
         }
         .about-img-outer{
-             width: 100vw;
+             width: 340px;
              height: 200px;
+             margin-left: 20px;
              .book{
                 top: 18px;
                 left: 18px;
              }
              .trophy{
                   top: 120px;
-                  right: 40px;    
+                  right: -20px;    
              }
              .laptop{
                   top: 250px;
@@ -766,7 +767,7 @@ header{
     //service----------
     .service-outer{
         margin-top: 230px;
-        width: 390px;
+        width: 400px;
         height: 1200px;
         margin-bottom: 200px;
         h2{
@@ -788,7 +789,7 @@ header{
     //skill--------
     .skill-outer{
         margin-top: 40px;
-        width: 390px;
+        width: 400px;
         height: 1100px;
         .skill-in{
            margin-left: 35px;
@@ -816,11 +817,11 @@ header{
     }
     //project-------
     .project-outer{
-        width: 390px;
+        width: 400px;
         height: 400px;
         .project-in{
             flex-direction: column;
-            width: 390px;
+            width: 400px;
             height: 500px;
             .project-img{
                 width: 300px;
@@ -841,7 +842,7 @@ header{
     //achieve-----------
     .achieve-outer{
         margin-top: 800px;
-        width: 390px;
+        width: 400px;
         height: 1200px;
         .achieve-in{
             width: 340px;
@@ -878,7 +879,7 @@ header{
     }
     //footer---------
     .footer-out{
-        width: 390px;
+        width: 400px;
         height: 360px;
         margin-top: 20px;
         .footer-in{

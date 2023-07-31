@@ -651,9 +651,11 @@ header .about-img-outer .laptop svg {
 }
 
 @media screen and (max-width: 400px) {
+  nav {
+    width: 400px;
+  }
   nav .hamburger {
     display: block;
-    margin-right: 50px;
   }
   nav .menu {
     margin: 0;
@@ -688,7 +690,7 @@ header .about-img-outer .laptop svg {
     margin-top: 70px;
   }
   header .about-info-outer {
-    width: 320px;
+    width: 340px;
     padding: 30px;
     display: inline;
   }
@@ -698,8 +700,9 @@ header .about-img-outer .laptop svg {
     height: 440px;
   }
   header .about-img-outer {
-    width: 100vw;
+    width: 340px;
     height: 200px;
+    margin-left: 20px;
   }
   header .about-img-outer .book {
     top: 18px;
@@ -707,7 +710,7 @@ header .about-img-outer .laptop svg {
   }
   header .about-img-outer .trophy {
     top: 120px;
-    right: 40px;
+    right: -20px;
   }
   header .about-img-outer .laptop {
     top: 250px;
@@ -721,7 +724,7 @@ header .about-img-outer .laptop svg {
   }
   .service-outer {
     margin-top: 230px;
-    width: 390px;
+    width: 400px;
     height: 1200px;
     margin-bottom: 200px;
   }
@@ -740,7 +743,7 @@ header .about-img-outer .laptop svg {
   }
   .skill-outer {
     margin-top: 40px;
-    width: 390px;
+    width: 400px;
     height: 1100px;
   }
   .skill-outer .skill-in {
@@ -766,12 +769,12 @@ header .about-img-outer .laptop svg {
     margin-left: 95px;
   }
   .project-outer {
-    width: 390px;
+    width: 400px;
     height: 400px;
   }
   .project-outer .project-in {
     flex-direction: column;
-    width: 390px;
+    width: 400px;
     height: 500px;
   }
   .project-outer .project-in .project-img {
@@ -788,7 +791,7 @@ header .about-img-outer .laptop svg {
   }
   .achieve-outer {
     margin-top: 800px;
-    width: 390px;
+    width: 400px;
     height: 1200px;
   }
   .achieve-outer .achieve-in {
@@ -823,7 +826,7 @@ header .about-img-outer .laptop svg {
     margin: 10px auto;
   }
   .footer-out {
-    width: 390px;
+    width: 400px;
     height: 360px;
     margin-top: 20px;
   }

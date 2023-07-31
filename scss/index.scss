@@ -35,7 +35,7 @@ p{
 }
 
 .animated-text span::before{
-    content: "Web Developer";
+    content: "Front-End Web developer";
     color: $col-green;
     animation: words 20s infinite;
 }
@@ -59,16 +59,16 @@ p{
 
 @keyframes words {
     0%,20%{
-        content: "Web developer";
+        content: "Front-End Web developer";
     }
     21%,40%{
-        content: "Graphic Designer";
+        content: "Graphics Designer";
     }
     41%,60%{
         content: "Programmer";
     }
     61%,80%{
-        content: "Web developer";
+        content: "Front-End Web developer";
     }
     81%,100%{
         content: "Graphic Designer";
@@ -90,7 +90,7 @@ nav{
     height: 60px;
     display: flex;
     justify-content:space-between;
-    background-color: $col-primary;
+    background-color: $col-green;
     align-items: center;
     .portfolio{
         margin-left: 50px;
@@ -98,7 +98,7 @@ nav{
             text-transform: uppercase;
             font-size: $font-big;
             font-size: 18px;
-            color: $col-light;
+            color: $col-primary;
         }
     }
     .menu{
@@ -110,10 +110,10 @@ nav{
             font-weight: 400;
             font-size: $font-med;
             transition: 0.2s;
-            color: $col-light;
+            color: $col-primary;
         }
         a:hover{
-            color: $col-green;
+            color: $col-light;
             transition: 0.2s;
         }
         
@@ -227,7 +227,7 @@ header{
                 height: 100%;
                 border-radius: 50%;
                 object-fit: cover;  
-                object-position: 0px -80px;   
+                object-position: 0px -50px;   
             }
              
         }
@@ -281,7 +281,7 @@ header{
 .service-outer{
     width: 100vw;
     height: 450px;
-    background-color: $col-primary;
+    background-color: $col-green;
     h2{
         text-transform: capitalize;
         text-align: center;
@@ -292,7 +292,7 @@ header{
     .underline{
         width: 80px;
         height: 3px;
-        background-color: $col-green;
+        background-color: $col-primary;
         margin-top: 5px;
         margin: auto;
     }
@@ -343,7 +343,7 @@ header{
 .skill-outer{
     width: 100vw;
     height: 400px;
-    background-color: $col-primary;
+    background-color: $col-green;
     .skill-in{
         width: 100vw;
         height: 300px;
@@ -371,12 +371,13 @@ header{
                     img{
                           width: 100%;
                           height: 100%;
+                          object-fit: contain;
                     }
                 }
                 h4{
                     text-align: center;
                     font-size: $font-med;
-                    color: $col-light;
+                    color: $col-primary;
 
                 } 
                 
@@ -394,12 +395,13 @@ header{
                 img{
                     width: 100%;
                     height: 100%;
+                    object-fit: contain;
                 }
             }
             h4{
                 text-align: center;
                 font-size: $font-med;
-                color: $col-light;
+                color: $col-primary;
             }
     }   
         
@@ -413,9 +415,12 @@ header{
 .project-outer{
     width:100vw;
     height: 800px;
-    background-color: $col-green;
+    background-color: $col-light;
+    h2{
+        color: $col-primary;
+    }
     .underline{
-        background-color: $col-primary;
+        background-color: $col-green;
     }
     .project-in{
         width: 100%;
@@ -493,7 +498,7 @@ header{
 .achieve-outer{
     width: 100vw;
     height: 500px;
-    background-color: $col-secondary;
+    background-color: $col-green;
     .achieve-in{
         width: 90%;
         height: 400px;
@@ -512,13 +517,13 @@ header{
                 background-color: $col-primary;
                 color: $col-light;
                 h4{
-                    text-transform: capitalize;
+                    text-transform: uppercase;
                     font-size: $font-med;
                     font-weight: 500;
                     text-align: center;
                 }
                 p{
-                    text-transform: capitalize;
+                    text-transform: uppercase;
                     font-size: $font-sml;
                     font-weight: 500;
                     text-align: center;
@@ -544,13 +549,13 @@ header{
                         background-color: $col-primary;
                         color: $col-light;
                         h4{
-                            text-transform: capitalize;
+                            text-transform: uppercase;
                             font-size: $font-med;
                             font-weight: 500;
                             text-align: center;
                         }
                         p{
-                            text-transform: capitalize;
+                            text-transform: uppercase;
                             font-size: $font-sml;
                             font-weight: 500;
                             text-align: center;
@@ -584,13 +589,13 @@ header{
                          background-color: $col-primary;
                          color: $col-light;
                         h4{
-                            text-transform: capitalize;
+                            text-transform: uppercase;
                             font-size: $font-med;
                             font-weight: 500;
                             text-align: center;
                         }
                         p{
-                            text-transform: capitalize;
+                            text-transform: uppercase;
                             font-size: $font-sml;
                             font-weight: 500;
                             text-align: center;
@@ -684,11 +689,10 @@ header{
 // media-querry-------------
 
 @media screen and (max-width: 400px){
-
     nav{
-        width: 390px;
         .hamburger {
             display: block;
+            margin-right: 50px;
         }
         .menu{
             margin: 0;
@@ -722,7 +726,7 @@ header{
     header{
         display: flex;
         flex-direction: column;
-        width: 200px;
+        width: 100vw;
         height: 700px;
         margin-top: 70px;
         .about-info-outer{
@@ -744,7 +748,7 @@ header{
              }
              .trophy{
                   top: 120px;
-                  right: 30px;    
+                  right: 40px;    
              }
              .laptop{
                   top: 250px;
